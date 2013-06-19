@@ -10,6 +10,7 @@
 
 @interface SOLCalendarViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
+@property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

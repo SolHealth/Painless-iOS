@@ -19,6 +19,7 @@
 
 - (NSString *)weekdayTextForDayIndex:(NSInteger)dayIndex;
 - (NSString *)dayTextForDayIndex:(NSInteger)dayIndex;
+- (NSString *)monthAndYearTextForDayIndex:(NSInteger)dayIndex;
 
 // TODO: Dispatch a notification if the current day changes (ie, at midnight)
 

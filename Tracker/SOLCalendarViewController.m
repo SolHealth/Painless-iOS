@@ -15,7 +15,12 @@
 
 @interface SOLCalendarViewController ()
 
-@property (nonatomic, strong) SOLDaysTracker *daysTracker;
+@property (nonatomic, strong, readonly) SOLDaysTracker *daysTracker;
+
+@property (nonatomic, strong) NSIndexPath *visibleReferenceIndexPath;
+
+// Note that this may desynch from the actual number of days if midnight is crossed - but our data should stay internally consistent.
+@property (nonatomic, readonly) NSInteger numberOfDays;
 
 @end
 
@@ -26,6 +31,8 @@
     if ((self = [super initWithCoder:aDecoder])) {
         _daysTracker = [[SOLDaysTracker alloc] initWithCalendar:[NSCalendar currentCalendar]
                                                    startingDate:[NSDate dateWithTimeIntervalSinceNow:-1251542]];
+        _numberOfDays = [_daysTracker numberOfDaysSinceStartingDateInclusive];
+        _visibleReferenceIndexPath = nil;
     }
     return self;
 }
@@ -34,6 +41,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    // Let's show 'today'.
+    NSIndexPath *todayIndexPath = [NSIndexPath indexPathForItem:self.numberOfDays - 1 inSection:0];
+    [self.collectionView scrollToItemAtIndexPath:todayIndexPath
+                                atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
+                                        animated:NO];
+    // And make sure we update with the correct reference path; the above line triggers scrollViewDidScroll with no visible cells yet.
+    [self updateWithNewReferenceIndexPath:todayIndexPath];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +71,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.daysTracker numberOfDaysSinceStartingDateInclusive];
+    return self.numberOfDays;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -81,9 +101,9 @@
 // Returns NSNotFound for indexPaths that don't correspond to dayIndexes
 - (NSInteger)dayIndexForIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section != 0) { return NSNotFound; }
+    if (indexPath == nil || indexPath.section != 0) { return NSNotFound; }
 
-    return indexPath.row;
+    return indexPath.item;
 }
 
 #pragma mark - UIScrollViewDelegate (UICollectionViewDelegate
@@ -91,8 +111,26 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (scrollView == self.collectionView) {
-        
+        SOLDailySummaryCell *firstVisibleCell = self.collectionView.visibleCells.firstObject;
+        NSIndexPath *firstVisibleIndexPath = [self.collectionView indexPathForCell:firstVisibleCell];
+        if (![firstVisibleIndexPath isEqual:self.visibleReferenceIndexPath]) {
+            // Our first visible cell has changed - let's update the label at the top of the display.
+            [self updateWithNewReferenceIndexPath:firstVisibleIndexPath];
+        }
     }
+}
+
+- (void)updateWithNewReferenceIndexPath:(NSIndexPath *)newReferenceIndexPath;
+{
+    self.visibleReferenceIndexPath = newReferenceIndexPath;
+    NSInteger dayIndex = [self dayIndexForIndexPath:newReferenceIndexPath];
+
+    if (dayIndex != NSNotFound) {
+        self.monthLabel.text = [self.daysTracker monthAndYearTextForDayIndex:dayIndex];
+    } else {
+        self.monthLabel.text = nil;
+    }
+
 }
 
 @end

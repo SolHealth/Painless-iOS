@@ -13,6 +13,10 @@
 @property (nonatomic, copy, readonly) NSCalendar *calendar;
 @property (nonatomic, readonly) NSInteger startingDay;
 
+@property (nonatomic, strong) NSDateFormatter *weekdayFormatter;
+@property (nonatomic, strong) NSDateFormatter *dayFormatter;
+@property (nonatomic, strong) NSDateFormatter *monthYearFormatter;
+
 @end
 
 @implementation SOLDaysTracker
@@ -24,9 +28,15 @@
         _calendar = [calendar copy];
         _startingDay = [self.class dayForDate:startingDate
                                    inCalendar:_calendar];
+
+        _weekdayFormatter   = [self.class dateFormatterWithFormatTemplate:@"EEE"    calendar:_calendar];
+        _dayFormatter       = [self.class dateFormatterWithFormatTemplate:@"dd"     calendar:_calendar];
+        _monthYearFormatter = [self.class dateFormatterWithFormatTemplate:@"MMMM y" calendar:_calendar];
     }
     return self;
 }
+
+#pragma mark - Instance-level data manipulation
 
 - (NSInteger)numberOfDaysSinceStartingDateInclusive
 {
@@ -37,51 +47,44 @@
 
 - (NSString *)weekdayTextForDayIndex:(NSInteger)dayIndex
 {
-    NSInteger day = [self.class dayForDayIndex:dayIndex
-                                   startingDay:self.startingDay];
-
-    static NSDateFormatter *WeekdayTextFormatter = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSString *weekdayTextFormat = [NSDateFormatter dateFormatFromTemplate:@"EEE"
-                                                                      options:0
-                                                                       locale:self.calendar.locale];
-        WeekdayTextFormatter = [[NSDateFormatter alloc] init];
-        WeekdayTextFormatter.dateFormat = weekdayTextFormat;
-    });
-
-    NSDate *date = [self.class dateForDay:day
-                               inCalendar:self.calendar];
-
-    NSString *formattedText = [WeekdayTextFormatter stringFromDate:date];
-
-    return formattedText;
+    return [self textForDayIndex:dayIndex withFormatter:self.weekdayFormatter];
 }
 
 - (NSString *)dayTextForDayIndex:(NSInteger)dayIndex
 {
-    NSInteger day = [self.class dayForDayIndex:dayIndex
-                                   startingDay:self.startingDay];
+    return [self textForDayIndex:dayIndex withFormatter:self.dayFormatter];
+}
 
-    static NSDateFormatter *DayTextFormatter = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSString *dayTextFormat = [NSDateFormatter dateFormatFromTemplate:@"dd"
-                                                                      options:0
-                                                                       locale:self.calendar.locale];
-        DayTextFormatter = [[NSDateFormatter alloc] init];
-        DayTextFormatter.dateFormat = dayTextFormat;
-    });
+- (NSString *)monthAndYearTextForDayIndex:(NSInteger)dayIndex
+{
+    return [self textForDayIndex:dayIndex withFormatter:self.monthYearFormatter];
+}
 
-    NSDate *date = [self.class dateForDay:day
-                               inCalendar:self.calendar];
+- (NSDate *)dateForDayIndex:(NSInteger)dayIndex
+{
+    NSInteger day = [self.class dayForDayIndex:dayIndex startingDay:self.startingDay];
+    NSDate *date = [self.class dateForDay:day inCalendar:self.calendar];
+    return date;
+}
 
-    NSString *formattedText = [DayTextFormatter stringFromDate:date];
-
+- (NSString *)textForDayIndex:(NSInteger)dayIndex withFormatter:(NSDateFormatter *)dateFormatter
+{
+    NSDate *date = [self dateForDayIndex:dayIndex];
+    NSString *formattedText = [dateFormatter stringFromDate:date];
     return formattedText;
 }
 
 #pragma mark - Private class-level 'pure' functions
+
++ (NSDateFormatter *)dateFormatterWithFormatTemplate:(NSString *)formatTemplate calendar:(NSCalendar *)calendar
+{
+    NSString *format = [NSDateFormatter dateFormatFromTemplate:formatTemplate
+                                                       options:0
+                                                        locale:calendar.locale];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = format;
+    return formatter;
+}
 
 + (NSInteger)dayForDayIndex:(NSInteger)dayIndex startingDay:(NSInteger)startingDay
 {
