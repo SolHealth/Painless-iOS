@@ -14,13 +14,15 @@
 		B1D0717617712CF300E9FC45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0717517712CF300E9FC45 /* main.m */; };
 		B1D0717A17712CF300E9FC45 /* SOLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0717917712CF300E9FC45 /* SOLAppDelegate.m */; };
 		B1D0717D17712CF300E9FC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D0717B17712CF300E9FC45 /* Main.storyboard */; };
-		B1D0718017712CF300E9FC45 /* SOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0717F17712CF300E9FC45 /* SOLViewController.m */; };
+		B1D0718017712CF300E9FC45 /* SOLDailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0717F17712CF300E9FC45 /* SOLDailyViewController.m */; };
 		B1D0718217712CF300E9FC45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D0718117712CF300E9FC45 /* Images.xcassets */; };
 		B1D0718917712CF300E9FC45 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0718817712CF300E9FC45 /* XCTest.framework */; };
 		B1D0718A17712CF300E9FC45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716917712CF300E9FC45 /* Foundation.framework */; };
 		B1D0718B17712CF300E9FC45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716D17712CF300E9FC45 /* UIKit.framework */; };
 		B1D0719317712CF300E9FC45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1D0719117712CF300E9FC45 /* InfoPlist.strings */; };
 		B1D0719517712CF300E9FC45 /* TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0719417712CF300E9FC45 /* TrackerTests.m */; };
+		B1D071A017722DDF00E9FC45 /* SOLCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0719F17722DDF00E9FC45 /* SOLCalendarViewController.m */; };
+		B1D071A317722E3D00E9FC45 /* SOLDailySummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D071A217722E3D00E9FC45 /* SOLDailySummaryCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,18 @@
 		B1D0717817712CF300E9FC45 /* SOLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLAppDelegate.h; sourceTree = "<group>"; };
 		B1D0717917712CF300E9FC45 /* SOLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOLAppDelegate.m; sourceTree = "<group>"; };
 		B1D0717C17712CF300E9FC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B1D0717E17712CF300E9FC45 /* SOLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLViewController.h; sourceTree = "<group>"; };
-		B1D0717F17712CF300E9FC45 /* SOLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOLViewController.m; sourceTree = "<group>"; };
+		B1D0717E17712CF300E9FC45 /* SOLDailyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLDailyViewController.h; sourceTree = "<group>"; };
+		B1D0717F17712CF300E9FC45 /* SOLDailyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOLDailyViewController.m; sourceTree = "<group>"; };
 		B1D0718117712CF300E9FC45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B1D0718717712CF300E9FC45 /* TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D0718817712CF300E9FC45 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B1D0719017712CF300E9FC45 /* TrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrackerTests-Info.plist"; sourceTree = "<group>"; };
 		B1D0719217712CF300E9FC45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1D0719417712CF300E9FC45 /* TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerTests.m; sourceTree = "<group>"; };
+		B1D0719E17722DDF00E9FC45 /* SOLCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLCalendarViewController.h; sourceTree = "<group>"; };
+		B1D0719F17722DDF00E9FC45 /* SOLCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLCalendarViewController.m; sourceTree = "<group>"; };
+		B1D071A117722E3D00E9FC45 /* SOLDailySummaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLDailySummaryCell.h; sourceTree = "<group>"; };
+		B1D071A217722E3D00E9FC45 /* SOLDailySummaryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLDailySummaryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +121,8 @@
 				B1D0717817712CF300E9FC45 /* SOLAppDelegate.h */,
 				B1D0717917712CF300E9FC45 /* SOLAppDelegate.m */,
 				B1D0717B17712CF300E9FC45 /* Main.storyboard */,
-				B1D0717E17712CF300E9FC45 /* SOLViewController.h */,
-				B1D0717F17712CF300E9FC45 /* SOLViewController.m */,
+				B1D071A417722E4200E9FC45 /* Custom Views */,
+				B1D071A517722E4800E9FC45 /* View Controllers */,
 				B1D0718117712CF300E9FC45 /* Images.xcassets */,
 				B1D0717017712CF300E9FC45 /* Supporting Files */,
 			);
@@ -150,6 +156,26 @@
 				B1D0719117712CF300E9FC45 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1D071A417722E4200E9FC45 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1D071A117722E3D00E9FC45 /* SOLDailySummaryCell.h */,
+				B1D071A217722E3D00E9FC45 /* SOLDailySummaryCell.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		B1D071A517722E4800E9FC45 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1D0719E17722DDF00E9FC45 /* SOLCalendarViewController.h */,
+				B1D0719F17722DDF00E9FC45 /* SOLCalendarViewController.m */,
+				B1D0717E17712CF300E9FC45 /* SOLDailyViewController.h */,
+				B1D0717F17712CF300E9FC45 /* SOLDailyViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D0718017712CF300E9FC45 /* SOLViewController.m in Sources */,
+				B1D071A017722DDF00E9FC45 /* SOLCalendarViewController.m in Sources */,
+				B1D071A317722E3D00E9FC45 /* SOLDailySummaryCell.m in Sources */,
+				B1D0718017712CF300E9FC45 /* SOLDailyViewController.m in Sources */,
 				B1D0717617712CF300E9FC45 /* main.m in Sources */,
 				B1D0717A17712CF300E9FC45 /* SOLAppDelegate.m in Sources */,
 			);

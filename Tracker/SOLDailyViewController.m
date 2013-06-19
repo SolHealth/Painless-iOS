@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Sol Health, Inc. All rights reserved.
 //
 
-#import "SOLViewController.h"
+#import "SOLDailyViewController.h"
 
-@interface SOLViewController ()
+@interface SOLDailyViewController ()
 
 @end
 
-@implementation SOLViewController
+@implementation SOLDailyViewController
 
 - (void)viewDidLoad
 {
@@ -24,6 +24,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)zoomOut
+{
+    [self performSegueWithIdentifier:@"CollectionSegue" sender:nil];
 }
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SOLViewController : UIViewController
+@interface SOLDailyViewController : UIViewController
 
 @end
