@@ -1,0 +1,7 @@
+Podfile.lock
+Pods/
+Crashes/
+Painless.xcodeproj/project.xcworkspace/
+xcuserdata
+*.trace/
+Painless.xcworkspace/
