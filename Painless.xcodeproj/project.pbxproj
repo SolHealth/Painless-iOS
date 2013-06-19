@@ -25,6 +25,9 @@
 		B1D071A317722E3D00E9FC45 /* SOLDailySummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D071A217722E3D00E9FC45 /* SOLDailySummaryCell.m */; };
 		B1D071A817723A0800E9FC45 /* SOLDaysTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D071A717723A0800E9FC45 /* SOLDaysTracker.m */; };
 		B1D071B1177247EF00E9FC45 /* SOLDailySummaryCell+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D071B0177247EF00E9FC45 /* SOLDailySummaryCell+Configuration.m */; };
+		B1D071B51772666400E9FC45 /* SOLTransitioningManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D071B41772666400E9FC45 /* SOLTransitioningManager.m */; };
+		B1D071B81772670200E9FC45 /* SOLDailyToCalendarTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D071B7177266F400E9FC45 /* SOLDailyToCalendarTransitionAnimator.m */; };
+		B1D071BB1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D071BA1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,12 @@
 		B1D071A717723A0800E9FC45 /* SOLDaysTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLDaysTracker.m; sourceTree = "<group>"; };
 		B1D071AF177247EF00E9FC45 /* SOLDailySummaryCell+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SOLDailySummaryCell+Configuration.h"; sourceTree = "<group>"; };
 		B1D071B0177247EF00E9FC45 /* SOLDailySummaryCell+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SOLDailySummaryCell+Configuration.m"; sourceTree = "<group>"; };
+		B1D071B31772666400E9FC45 /* SOLTransitioningManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLTransitioningManager.h; sourceTree = "<group>"; };
+		B1D071B41772666400E9FC45 /* SOLTransitioningManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLTransitioningManager.m; sourceTree = "<group>"; };
+		B1D071B6177266F400E9FC45 /* SOLDailyToCalendarTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLDailyToCalendarTransitionAnimator.h; sourceTree = "<group>"; };
+		B1D071B7177266F400E9FC45 /* SOLDailyToCalendarTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOLDailyToCalendarTransitionAnimator.m; sourceTree = "<group>"; };
+		B1D071B91772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLCalendarToDailyTransitionAnimator.h; sourceTree = "<group>"; };
+		B1D071BA1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLCalendarToDailyTransitionAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +140,7 @@
 				B1D071A717723A0800E9FC45 /* SOLDaysTracker.m */,
 				B1D071A417722E4200E9FC45 /* Custom Views */,
 				B1D071A517722E4800E9FC45 /* View Controllers */,
+				B1D071B21772663000E9FC45 /* Transitioning */,
 				B1D0718117712CF300E9FC45 /* Images.xcassets */,
 				B1D0717017712CF300E9FC45 /* Supporting Files */,
 			);
@@ -188,6 +198,19 @@
 				B1D0717F17712CF300E9FC45 /* SOLDailyViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B1D071B21772663000E9FC45 /* Transitioning */ = {
+			isa = PBXGroup;
+			children = (
+				B1D071B31772666400E9FC45 /* SOLTransitioningManager.h */,
+				B1D071B41772666400E9FC45 /* SOLTransitioningManager.m */,
+				B1D071B6177266F400E9FC45 /* SOLDailyToCalendarTransitionAnimator.h */,
+				B1D071B7177266F400E9FC45 /* SOLDailyToCalendarTransitionAnimator.m */,
+				B1D071B91772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.h */,
+				B1D071BA1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m */,
+			);
+			name = Transitioning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,12 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D071BB1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m in Sources */,
+				B1D071B81772670200E9FC45 /* SOLDailyToCalendarTransitionAnimator.m in Sources */,
 				B1D071A017722DDF00E9FC45 /* SOLCalendarViewController.m in Sources */,
 				B1D071A317722E3D00E9FC45 /* SOLDailySummaryCell.m in Sources */,
 				B1D071A817723A0800E9FC45 /* SOLDaysTracker.m in Sources */,
 				B1D0718017712CF300E9FC45 /* SOLDailyViewController.m in Sources */,
 				B1D0717617712CF300E9FC45 /* main.m in Sources */,
 				B1D071B1177247EF00E9FC45 /* SOLDailySummaryCell+Configuration.m in Sources */,
+				B1D071B51772666400E9FC45 /* SOLTransitioningManager.m in Sources */,
 				B1D0717A17712CF300E9FC45 /* SOLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

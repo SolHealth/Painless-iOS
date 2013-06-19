@@ -1,5 +1,5 @@
 //
-//  SOLSummaryViewController.h
+//  SOLCalendarViewController.h
 //  Painless
 //
 //  Created by Janardan Yri on 6/19/13.

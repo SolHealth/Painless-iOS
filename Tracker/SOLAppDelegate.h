@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class SOLTransitioningManager;
+
 @interface SOLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) SOLTransitioningManager *transitioningManager;
 
 @end

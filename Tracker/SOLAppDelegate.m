@@ -7,12 +7,16 @@
 //
 
 #import "SOLAppDelegate.h"
+#import "SOLTransitioningManager.h"
 
 @implementation SOLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+    self.transitioningManager = [[SOLTransitioningManager alloc] init];
+
     return YES;
 }
 							

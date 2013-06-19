@@ -1,5 +1,5 @@
 //
-//  SOLSummaryViewController.m
+//  SOLCalendarViewController.m
 //  Painless
 //
 //  Created by Janardan Yri on 6/19/13.
@@ -12,6 +12,7 @@
 #import "SOLDailySummaryCell+Configuration.h"
 
 #import "SOLDaysTracker.h"
+#import "SOLAppDelegate.h"
 
 @interface SOLCalendarViewController ()
 
@@ -33,6 +34,8 @@
                                                    startingDate:[NSDate dateWithTimeIntervalSinceNow:-1251542]];
         _numberOfDays = [_daysTracker numberOfDaysSinceStartingDateInclusive];
         _visibleReferenceIndexPath = nil;
+        self.modalPresentationStyle = UIModalPresentationCustom;
+        self.transitioningDelegate = [(SOLAppDelegate *)[UIApplication sharedApplication].delegate transitioningManager];
     }
     return self;
 }
