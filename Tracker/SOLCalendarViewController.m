@@ -7,19 +7,25 @@
 //
 
 #import "SOLCalendarViewController.h"
+
 #import "SOLDailySummaryCell.h"
+#import "SOLDailySummaryCell+Configuration.h"
+
+#import "SOLDaysTracker.h"
 
 @interface SOLCalendarViewController ()
+
+@property (nonatomic, strong) SOLDaysTracker *daysTracker;
 
 @end
 
 @implementation SOLCalendarViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if ((self = [super initWithCoder:aDecoder])) {
+        _daysTracker = [[SOLDaysTracker alloc] initWithCalendar:[NSCalendar currentCalendar]
+                                                   startingDate:[NSDate dateWithTimeIntervalSinceNow:-1251542]];
     }
     return self;
 }
@@ -45,7 +51,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.daysTracker numberOfDaysSinceStartingDateInclusive];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -54,12 +60,30 @@
     SOLDailySummaryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier
                                                                           forIndexPath:indexPath];
 
+    NSInteger dayIndex = [self dayIndexForIndexPath:indexPath];
+
+    NSString *weekdayText = [self.daysTracker weekdayTextForDayIndex:dayIndex];
+    NSString *dayText     = [self.daysTracker dayTextForDayIndex:dayIndex];
+
+    [cell configureWithWeekdayText:weekdayText
+                           dayText:dayText];
+
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Data Management
+
+// Returns NSNotFound for indexPaths that don't correspond to dayIndexes
+- (NSInteger)dayIndexForIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section != 0) { return NSNotFound; }
+
+    return indexPath.row;
 }
 
 @end

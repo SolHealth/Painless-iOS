@@ -67,14 +67,41 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="77" height="215"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGo-k4-PqH">
+                                            <rect key="frame" x="0.0" y="14" width="77" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWo-9P-HLT">
+                                            <rect key="frame" x="0.0" y="43" width="77" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.61828493648198568" green="0.38928421819803127" blue="0.64548788265306123" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wWo-9P-HLT" firstAttribute="leading" secondItem="rW5-km-C1e" secondAttribute="leading" id="LS0-8c-gMN"/>
+                                    <constraint firstAttribute="trailing" secondItem="wWo-9P-HLT" secondAttribute="trailing" id="SSJ-xB-hqA"/>
+                                    <constraint firstItem="LGo-k4-PqH" firstAttribute="leading" secondItem="rW5-km-C1e" secondAttribute="leading" id="hie-KP-vmU"/>
+                                    <constraint firstAttribute="trailing" secondItem="LGo-k4-PqH" secondAttribute="trailing" id="iww-0k-PJQ"/>
+                                    <constraint firstItem="wWo-9P-HLT" firstAttribute="top" secondItem="LGo-k4-PqH" secondAttribute="bottom" constant="8" id="mrJ-qx-pDI"/>
+                                    <constraint firstItem="LGo-k4-PqH" firstAttribute="top" secondItem="rW5-km-C1e" secondAttribute="top" constant="14" id="utu-K6-fgF"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dayLabel" destination="wWo-9P-HLT" id="pPn-dz-EuJ"/>
+                                    <outlet property="weekdayLabel" destination="LGo-k4-PqH" id="Zsg-7x-h4K"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -89,35 +116,6 @@
             <point key="canvasLocation" x="804" y="768"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SOLCalendarViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SOLCalendarViewController.h"/>
-        </class>
-        <class className="SOLDailySummaryCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SOLDailySummaryCell.h"/>
-        </class>
-        <class className="SOLDailyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SOLDailyViewController.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
