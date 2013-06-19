@@ -13,6 +13,7 @@
 
 #import "SOLDaysTracker.h"
 #import "SOLAppDelegate.h"
+#import "SOLTransitioningManager.h"
 
 @interface SOLCalendarViewController ()
 
@@ -22,6 +23,8 @@
 
 // Note that this may desynch from the actual number of days if midnight is crossed - but our data should stay internally consistent.
 @property (nonatomic, readonly) NSInteger numberOfDays;
+
+@property (nonatomic, weak, readwrite) UIView *selectedView;
 
 @end
 
@@ -94,8 +97,12 @@
     return cell;
 }
 
+#pragma mark - UICollectionViewDelegate
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Set this for the transition animator to animate from
+    self.selectedView = (SOLDailySummaryCell *)[collectionView cellForItemAtIndexPath:indexPath];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -109,7 +116,7 @@
     return indexPath.item;
 }
 
-#pragma mark - UIScrollViewDelegate (UICollectionViewDelegate
+#pragma mark - UIScrollViewDelegate (UICollectionViewDelegate)
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

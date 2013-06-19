@@ -74,6 +74,7 @@
 		B1D071B7177266F400E9FC45 /* SOLDailyToCalendarTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOLDailyToCalendarTransitionAnimator.m; sourceTree = "<group>"; };
 		B1D071B91772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLCalendarToDailyTransitionAnimator.h; sourceTree = "<group>"; };
 		B1D071BA1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLCalendarToDailyTransitionAnimator.m; sourceTree = "<group>"; };
+		B1D071BC1772756200E9FC45 /* SOLMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLMath.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +134,7 @@
 		B1D0716F17712CF300E9FC45 /* Painless */ = {
 			isa = PBXGroup;
 			children = (
+				B1D071BC1772756200E9FC45 /* SOLMath.h */,
 				B1D0717817712CF300E9FC45 /* SOLAppDelegate.h */,
 				B1D0717917712CF300E9FC45 /* SOLAppDelegate.m */,
 				B1D0717B17712CF300E9FC45 /* Main.storyboard */,

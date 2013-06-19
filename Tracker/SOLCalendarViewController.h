@@ -13,4 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+// Used for transitioning to the daily view.
+@property (nonatomic, weak, readonly) UIView *selectedView;
+
 @end

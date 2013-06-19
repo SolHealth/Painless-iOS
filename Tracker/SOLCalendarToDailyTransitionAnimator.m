@@ -9,6 +9,7 @@
 #import "SOLCalendarToDailyTransitionAnimator.h"
 #import "SOLDailyViewController.h"
 #import "SOLCalendarViewController.h"
+#import "SOLMath.h"
 
 @implementation SOLCalendarToDailyTransitionAnimator
 
@@ -22,14 +23,21 @@
     SOLCalendarViewController *calendarViewController = (SOLCalendarViewController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     SOLDailyViewController *summaryViewController = (SOLDailyViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
 
-    summaryViewController.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.2, 0.2);
-
+    UIView *containerView = calendarViewController.view.superview;
     // TODO: Why does the commented out version not work?
-    //    [transitionContext.containerView addSubview:summaryViewController.view];
-    [calendarViewController.view.superview addSubview:summaryViewController.view];
+    //    containerView = transitionContext.containerView;
+
+    UIView *selectedView = calendarViewController.selectedView;
+    CGRect selectedRect = [containerView convertRect:selectedView.frame fromView:selectedView.superview];
+    CGRect finalRect = containerView.bounds;
+
+    summaryViewController.view.transform = SOLCGAffineTransformFromRectToRect(finalRect, selectedRect);
+
+    [containerView addSubview:summaryViewController.view];
 
     [UIView animateWithDuration:0.5f animations:^{
         summaryViewController.view.transform = CGAffineTransformIdentity;
+        selectedView.transform = SOLCGAffineTransformFromRectToRect(selectedRect, finalRect);
         summaryViewController.view.alpha = 1;
         calendarViewController.view.alpha = 0;
     } completion:^(BOOL finished) {
