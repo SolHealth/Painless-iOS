@@ -15,27 +15,27 @@
 
 @interface SOLTransitioningManager ()
 
-@property (nonatomic, strong, readonly) SOLDailyToCalendarTransitionAnimator *summaryToCalendarTransitionAnimator;
+@property (nonatomic, strong, readonly) SOLDailyToCalendarTransitionAnimator *dailyToCalendarTransitionAnimator;
 @property (nonatomic, strong, readonly) SOLCalendarToDailyTransitionAnimator *calendarToDailyTransitionAnimator;
 
 @end
 
 @implementation SOLTransitioningManager
 
-@synthesize summaryToCalendarTransitionAnimator = _summaryToCalendarTransitionAnimator;
+@synthesize dailyToCalendarTransitionAnimator = _dailyToCalendarTransitionAnimator;
 @synthesize calendarToDailyTransitionAnimator = _calendarToDailyTransitionAnimator;
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-//    if ([presenting isKindOfClass:[SOLCalendarViewController class]] && [source isKindOfClass:[SOLDailyViewController class]]) {
-//    }
-    return [self summaryToCalendarTransitionAnimator];
+    NSAssert([presenting isKindOfClass:[SOLDailyViewController class]] && [presented isKindOfClass:[SOLCalendarViewController class]], @"Unrecognized view controllers.");
+    return [self dailyToCalendarTransitionAnimator];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
+    NSAssert([dismissed isKindOfClass:[SOLCalendarViewController class]], @"Unrecognized view controller.");
     return [self calendarToDailyTransitionAnimator];
 }
 
@@ -51,13 +51,13 @@
 
 #pragma mark - Lazily instantiated properties
 
-- (SOLDailyToCalendarTransitionAnimator *)summaryToCalendarTransitionAnimator
+- (SOLDailyToCalendarTransitionAnimator *)dailyToCalendarTransitionAnimator
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _summaryToCalendarTransitionAnimator = [[SOLDailyToCalendarTransitionAnimator alloc] init];
+        _dailyToCalendarTransitionAnimator = [[SOLDailyToCalendarTransitionAnimator alloc] init];
     });
-    return _summaryToCalendarTransitionAnimator;
+    return _dailyToCalendarTransitionAnimator;
 }
 
 - (SOLCalendarToDailyTransitionAnimator *)calendarToDailyTransitionAnimator
