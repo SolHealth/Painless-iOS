@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1D0716517712CF300E9FC45"
                BuildableName = "Tracker.app"
-               BlueprintName = "Tracker"
-               ReferencedContainer = "container:Tracker.xcodeproj">
+               BlueprintName = "Painless"
+               ReferencedContainer = "container:Painless.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1D0718617712CF300E9FC45"
                BuildableName = "TrackerTests.xctest"
-               BlueprintName = "TrackerTests"
-               ReferencedContainer = "container:Tracker.xcodeproj">
+               BlueprintName = "PainlessTests"
+               ReferencedContainer = "container:Painless.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1D0716517712CF300E9FC45"
             BuildableName = "Tracker.app"
-            BlueprintName = "Tracker"
-            ReferencedContainer = "container:Tracker.xcodeproj">
+            BlueprintName = "Painless"
+            ReferencedContainer = "container:Painless.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1D0716517712CF300E9FC45"
             BuildableName = "Tracker.app"
-            BlueprintName = "Tracker"
-            ReferencedContainer = "container:Tracker.xcodeproj">
+            BlueprintName = "Painless"
+            ReferencedContainer = "container:Painless.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1D0716517712CF300E9FC45"
             BuildableName = "Tracker.app"
-            BlueprintName = "Tracker"
-            ReferencedContainer = "container:Tracker.xcodeproj">
+            BlueprintName = "Painless"
+            ReferencedContainer = "container:Painless.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

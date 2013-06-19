@@ -1,6 +1,6 @@
 //
-//  TrackerTests.m
-//  TrackerTests
+//  PainlessTests.m
+//  PainlessTests
 //
 //  Created by Janardan Yri on 6/18/13.
 //  Copyright (c) 2013 Sol Health, Inc. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface TrackerTests : XCTestCase
+@interface PainlessTests : XCTestCase
 
 @end
 
-@implementation TrackerTests
+@implementation PainlessTests
 
 - (void)setUp
 {

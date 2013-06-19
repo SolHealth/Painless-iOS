@@ -20,7 +20,7 @@
 		B1D0718A17712CF300E9FC45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716917712CF300E9FC45 /* Foundation.framework */; };
 		B1D0718B17712CF300E9FC45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716D17712CF300E9FC45 /* UIKit.framework */; };
 		B1D0719317712CF300E9FC45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1D0719117712CF300E9FC45 /* InfoPlist.strings */; };
-		B1D0719517712CF300E9FC45 /* TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0719417712CF300E9FC45 /* TrackerTests.m */; };
+		B1D0719517712CF300E9FC45 /* PainlessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0719417712CF300E9FC45 /* PainlessTests.m */; };
 		B1D071A017722DDF00E9FC45 /* SOLCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D0719F17722DDF00E9FC45 /* SOLCalendarViewController.m */; };
 		B1D071A317722E3D00E9FC45 /* SOLDailySummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D071A217722E3D00E9FC45 /* SOLDailySummaryCell.m */; };
 /* End PBXBuildFile section */
@@ -36,25 +36,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B1D0716617712CF300E9FC45 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D0716617712CF300E9FC45 /* Painless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Painless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D0716917712CF300E9FC45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1D0716B17712CF300E9FC45 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B1D0716D17712CF300E9FC45 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B1D0717117712CF300E9FC45 /* Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tracker-Info.plist"; sourceTree = "<group>"; };
+		B1D0717117712CF300E9FC45 /* Painless-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Painless-Info.plist"; sourceTree = "<group>"; };
 		B1D0717317712CF300E9FC45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1D0717517712CF300E9FC45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B1D0717717712CF300E9FC45 /* Tracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tracker-Prefix.pch"; sourceTree = "<group>"; };
+		B1D0717717712CF300E9FC45 /* Painless-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Painless-Prefix.pch"; sourceTree = "<group>"; };
 		B1D0717817712CF300E9FC45 /* SOLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLAppDelegate.h; sourceTree = "<group>"; };
 		B1D0717917712CF300E9FC45 /* SOLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOLAppDelegate.m; sourceTree = "<group>"; };
 		B1D0717C17712CF300E9FC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1D0717E17712CF300E9FC45 /* SOLDailyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLDailyViewController.h; sourceTree = "<group>"; };
 		B1D0717F17712CF300E9FC45 /* SOLDailyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOLDailyViewController.m; sourceTree = "<group>"; };
 		B1D0718117712CF300E9FC45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B1D0718717712CF300E9FC45 /* TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D0718717712CF300E9FC45 /* PainlessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PainlessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D0718817712CF300E9FC45 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B1D0719017712CF300E9FC45 /* TrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrackerTests-Info.plist"; sourceTree = "<group>"; };
+		B1D0719017712CF300E9FC45 /* PainlessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PainlessTests-Info.plist"; sourceTree = "<group>"; };
 		B1D0719217712CF300E9FC45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B1D0719417712CF300E9FC45 /* TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerTests.m; sourceTree = "<group>"; };
+		B1D0719417712CF300E9FC45 /* PainlessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PainlessTests.m; sourceTree = "<group>"; };
 		B1D0719E17722DDF00E9FC45 /* SOLCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLCalendarViewController.h; sourceTree = "<group>"; };
 		B1D0719F17722DDF00E9FC45 /* SOLCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLCalendarViewController.m; sourceTree = "<group>"; };
 		B1D071A117722E3D00E9FC45 /* SOLDailySummaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLDailySummaryCell.h; sourceTree = "<group>"; };
@@ -88,8 +88,8 @@
 		B1D0715D17712CF300E9FC45 = {
 			isa = PBXGroup;
 			children = (
-				B1D0716F17712CF300E9FC45 /* Tracker */,
-				B1D0718E17712CF300E9FC45 /* TrackerTests */,
+				B1D0716F17712CF300E9FC45 /* Painless */,
+				B1D0718E17712CF300E9FC45 /* PainlessTests */,
 				B1D0716817712CF300E9FC45 /* Frameworks */,
 				B1D0716717712CF300E9FC45 /* Products */,
 			);
@@ -98,8 +98,8 @@
 		B1D0716717712CF300E9FC45 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1D0716617712CF300E9FC45 /* Tracker.app */,
-				B1D0718717712CF300E9FC45 /* TrackerTests.xctest */,
+				B1D0716617712CF300E9FC45 /* Painless.app */,
+				B1D0718717712CF300E9FC45 /* PainlessTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +115,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B1D0716F17712CF300E9FC45 /* Tracker */ = {
+		B1D0716F17712CF300E9FC45 /* Painless */ = {
 			isa = PBXGroup;
 			children = (
 				B1D0717817712CF300E9FC45 /* SOLAppDelegate.h */,
@@ -126,33 +126,35 @@
 				B1D0718117712CF300E9FC45 /* Images.xcassets */,
 				B1D0717017712CF300E9FC45 /* Supporting Files */,
 			);
+			name = Painless;
 			path = Tracker;
 			sourceTree = "<group>";
 		};
 		B1D0717017712CF300E9FC45 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1D0717117712CF300E9FC45 /* Tracker-Info.plist */,
+				B1D0717117712CF300E9FC45 /* Painless-Info.plist */,
 				B1D0717217712CF300E9FC45 /* InfoPlist.strings */,
 				B1D0717517712CF300E9FC45 /* main.m */,
-				B1D0717717712CF300E9FC45 /* Tracker-Prefix.pch */,
+				B1D0717717712CF300E9FC45 /* Painless-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B1D0718E17712CF300E9FC45 /* TrackerTests */ = {
+		B1D0718E17712CF300E9FC45 /* PainlessTests */ = {
 			isa = PBXGroup;
 			children = (
-				B1D0719417712CF300E9FC45 /* TrackerTests.m */,
+				B1D0719417712CF300E9FC45 /* PainlessTests.m */,
 				B1D0718F17712CF300E9FC45 /* Supporting Files */,
 			);
+			name = PainlessTests;
 			path = TrackerTests;
 			sourceTree = "<group>";
 		};
 		B1D0718F17712CF300E9FC45 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1D0719017712CF300E9FC45 /* TrackerTests-Info.plist */,
+				B1D0719017712CF300E9FC45 /* PainlessTests-Info.plist */,
 				B1D0719117712CF300E9FC45 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -181,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1D0716517712CF300E9FC45 /* Tracker */ = {
+		B1D0716517712CF300E9FC45 /* Painless */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1D0719817712CF300E9FC45 /* Build configuration list for PBXNativeTarget "Tracker" */;
+			buildConfigurationList = B1D0719817712CF300E9FC45 /* Build configuration list for PBXNativeTarget "Painless" */;
 			buildPhases = (
 				B1D0716217712CF300E9FC45 /* Sources */,
 				B1D0716317712CF300E9FC45 /* Frameworks */,
@@ -193,14 +195,14 @@
 			);
 			dependencies = (
 			);
-			name = Tracker;
+			name = Painless;
 			productName = Tracker;
-			productReference = B1D0716617712CF300E9FC45 /* Tracker.app */;
+			productReference = B1D0716617712CF300E9FC45 /* Painless.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B1D0718617712CF300E9FC45 /* TrackerTests */ = {
+		B1D0718617712CF300E9FC45 /* PainlessTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1D0719B17712CF300E9FC45 /* Build configuration list for PBXNativeTarget "TrackerTests" */;
+			buildConfigurationList = B1D0719B17712CF300E9FC45 /* Build configuration list for PBXNativeTarget "PainlessTests" */;
 			buildPhases = (
 				B1D0718317712CF300E9FC45 /* Sources */,
 				B1D0718417712CF300E9FC45 /* Frameworks */,
@@ -211,9 +213,9 @@
 			dependencies = (
 				B1D0718D17712CF300E9FC45 /* PBXTargetDependency */,
 			);
-			name = TrackerTests;
+			name = PainlessTests;
 			productName = TrackerTests;
-			productReference = B1D0718717712CF300E9FC45 /* TrackerTests.xctest */;
+			productReference = B1D0718717712CF300E9FC45 /* PainlessTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +233,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B1D0716117712CF300E9FC45 /* Build configuration list for PBXProject "Tracker" */;
+			buildConfigurationList = B1D0716117712CF300E9FC45 /* Build configuration list for PBXProject "Painless" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -244,8 +246,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1D0716517712CF300E9FC45 /* Tracker */,
-				B1D0718617712CF300E9FC45 /* TrackerTests */,
+				B1D0716517712CF300E9FC45 /* Painless */,
+				B1D0718617712CF300E9FC45 /* PainlessTests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D0719517712CF300E9FC45 /* TrackerTests.m in Sources */,
+				B1D0719517712CF300E9FC45 /* PainlessTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +299,7 @@
 /* Begin PBXTargetDependency section */
 		B1D0718D17712CF300E9FC45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B1D0716517712CF300E9FC45 /* Tracker */;
+			target = B1D0716517712CF300E9FC45 /* Painless */;
 			targetProxy = B1D0718C17712CF300E9FC45 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -404,9 +406,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tracker/Tracker-Prefix.pch";
-				INFOPLIST_FILE = "Tracker/Tracker-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Tracker/Painless-Prefix.pch";
+				INFOPLIST_FILE = "Tracker/Painless-Info.plist";
+				PRODUCT_NAME = Painless;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -417,9 +419,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tracker/Tracker-Prefix.pch";
-				INFOPLIST_FILE = "Tracker/Tracker-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Tracker/Painless-Prefix.pch";
+				INFOPLIST_FILE = "Tracker/Painless-Info.plist";
+				PRODUCT_NAME = Painless;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -439,8 +441,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "TrackerTests/TrackerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TrackerTests/PainlessTests-Info.plist";
+				PRODUCT_NAME = PainlessTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -457,8 +459,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tracker/Tracker-Prefix.pch";
-				INFOPLIST_FILE = "TrackerTests/TrackerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TrackerTests/PainlessTests-Info.plist";
+				PRODUCT_NAME = PainlessTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -467,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B1D0716117712CF300E9FC45 /* Build configuration list for PBXProject "Tracker" */ = {
+		B1D0716117712CF300E9FC45 /* Build configuration list for PBXProject "Painless" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1D0719617712CF300E9FC45 /* Debug */,
@@ -476,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1D0719817712CF300E9FC45 /* Build configuration list for PBXNativeTarget "Tracker" */ = {
+		B1D0719817712CF300E9FC45 /* Build configuration list for PBXNativeTarget "Painless" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1D0719917712CF300E9FC45 /* Debug */,
@@ -484,7 +486,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		B1D0719B17712CF300E9FC45 /* Build configuration list for PBXNativeTarget "TrackerTests" */ = {
+		B1D0719B17712CF300E9FC45 /* Build configuration list for PBXNativeTarget "PainlessTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1D0719C17712CF300E9FC45 /* Debug */,
