@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SOLCalendarViewController : UICollectionViewController
+@interface SOLCalendarViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

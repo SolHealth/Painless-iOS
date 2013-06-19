@@ -86,4 +86,13 @@
     return indexPath.row;
 }
 
+#pragma mark - UIScrollViewDelegate (UICollectionViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.collectionView) {
+        
+    }
+}
+
 @end
