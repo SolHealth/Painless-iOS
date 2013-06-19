@@ -57,7 +57,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YTD-uF-7cJ">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YTD-uF-7cJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CMO-kZ-gCr">
@@ -116,17 +116,21 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Jun 2013" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6D-t2-xeK">
-                                <rect key="frame" x="0.0" y="50" width="320" height="21"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YTD-uF-7cJ" firstAttribute="bottom" secondItem="TCN-aG-gcB" secondAttribute="bottom" id="0RR-VT-IWp"/>
+                            <constraint firstItem="YTD-uF-7cJ" firstAttribute="leading" secondItem="TCN-aG-gcB" secondAttribute="leading" id="4Kj-DA-ve7"/>
                             <constraint firstItem="c6D-t2-xeK" firstAttribute="leading" secondItem="TCN-aG-gcB" secondAttribute="leading" id="4QU-yF-xGc"/>
-                            <constraint firstItem="c6D-t2-xeK" firstAttribute="top" secondItem="TCN-aG-gcB" secondAttribute="top" constant="50" id="ZRq-VR-Pd7"/>
+                            <constraint firstItem="YTD-uF-7cJ" firstAttribute="trailing" secondItem="TCN-aG-gcB" secondAttribute="trailing" id="Jni-Mi-iRg"/>
+                            <constraint firstItem="YTD-uF-7cJ" firstAttribute="top" secondItem="TCN-aG-gcB" secondAttribute="top" id="Od4-ap-pty"/>
+                            <constraint firstItem="c6D-t2-xeK" firstAttribute="top" secondItem="TCN-aG-gcB" secondAttribute="top" constant="20" id="ZRq-VR-Pd7"/>
                             <constraint firstAttribute="trailing" secondItem="c6D-t2-xeK" secondAttribute="trailing" id="gex-oN-hxG"/>
                         </constraints>
                     </view>
