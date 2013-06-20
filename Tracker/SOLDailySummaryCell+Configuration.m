@@ -21,8 +21,6 @@
                  sleepMinutes:(NSInteger)sleepMinutes
           overallPainSeverity:(CGFloat)overallPainSeverity
 {
-    sleepMinutes = abs(sleepMinutes);
-    
     self.weekdayLabel.text = [[daysTracker weekdayTextForDayIndex:dayIndex] uppercaseString];
     self.dayLabel.text = [daysTracker dayTextForDayIndex:dayIndex];
 
@@ -72,7 +70,7 @@
 
 #ifdef BYPASS_CONSTRAINTS
     self.painBubble.translatesAutoresizingMaskIntoConstraints = YES;
-    [self removeConstraints:@[self.painWidthConstraint, self.painTopGapConstraint, self.painHeightConstraint]];
+    [self removeConstraints:@[self.painWidthConstraint, self.painTopGapConstraint, self.painHeightConstraint, self.painCenterConstraint]];
     self.painBubble.bounds = (CGRect) {
         .origin = CGPointZero,
         .size.width = 2 * painBubbleRadius,
@@ -92,7 +90,7 @@
 
 #ifdef BYPASS_CONSTRAINTS
     self.sleepBubble.translatesAutoresizingMaskIntoConstraints = YES;
-    [self removeConstraints:@[self.sleepWidthConstraint, self.sleepBottomGapConstraint, self.sleepHeightConstraint]];
+    [self removeConstraints:@[self.sleepWidthConstraint, self.sleepBottomGapConstraint, self.sleepHeightConstraint, self.sleepCenterConstraint]];
     self.sleepBubble.bounds = (CGRect) {
         .origin = CGPointZero,
         .size.width = 2 * sleepBubbleRadius,

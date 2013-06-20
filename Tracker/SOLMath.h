@@ -26,7 +26,7 @@ CG_INLINE CGAffineTransform SOLCGAffineTransformFromRectToRect(CGRect fromRect, 
 // Returns a random number 0..ordinality-1
 CG_INLINE NSInteger SOLRand(NSInteger ordinality)
 {
-    return ((NSInteger)arc4random()) % ordinality;
+    return (NSInteger)(arc4random() % ordinality);
 }
 
 CG_INLINE CGFloat SOLRandFloat(NSInteger ordinality)

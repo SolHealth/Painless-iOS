@@ -38,7 +38,7 @@
         NSInteger painHundredth = painHundredths[i];
 
         if (painHundredth != NSNotFound) {
-            accumulator += abs(painHundredth);
+            accumulator += painHundredth;
             count += 1;
         }
     }

@@ -580,7 +580,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="centerX" secondItem="qQU-W4-wqA" secondAttribute="centerX" id="9YW-IT-WvX"/>
                                                         <constraint firstItem="qQU-W4-wqA" firstAttribute="top" secondItem="s2b-Db-lkn" secondAttribute="top" constant="10" id="i0s-hp-cij"/>
-                                                        <constraint firstAttribute="centerX" secondItem="iEv-e6-AdH" secondAttribute="centerX" constant="-0.5" id="kfj-7F-i5I"/>
+                                                        <constraint firstAttribute="centerX" secondItem="iEv-e6-AdH" secondAttribute="centerX" id="kfj-7F-i5I"/>
                                                         <constraint firstAttribute="height" constant="115" id="mi3-aN-lYA"/>
                                                         <constraint firstAttribute="bottom" secondItem="iEv-e6-AdH" secondAttribute="bottom" constant="10" id="qRr-29-RRU"/>
                                                     </constraints>
@@ -614,13 +614,15 @@
                                             <outlet property="dataContainerView" destination="s2b-Db-lkn" id="fT5-kp-Udb"/>
                                             <outlet property="dayLabel" destination="wWo-9P-HLT" id="pPn-dz-EuJ"/>
                                             <outlet property="painBubble" destination="qQU-W4-wqA" id="b8B-1X-u6s"/>
+                                            <outlet property="painCenterConstraint" destination="9YW-IT-WvX" id="2HH-sZ-S6J"/>
                                             <outlet property="painHeightConstraint" destination="zWy-ZG-FgF" id="GPG-DR-eCC"/>
                                             <outlet property="painTopGapConstraint" destination="i0s-hp-cij" id="ca5-i1-6sT"/>
-                                            <outlet property="painWidthConstraint" destination="5MN-8W-Til" id="OR7-VP-kQ1"/>
+                                            <outlet property="painWidthConstraint" destination="5MN-8W-Til" id="qkp-MT-SFj"/>
                                             <outlet property="sleepBottomGapConstraint" destination="qRr-29-RRU" id="SB1-Rn-TcV"/>
                                             <outlet property="sleepBubble" destination="iEv-e6-AdH" id="sls-pJ-0Fc"/>
-                                            <outlet property="sleepHeightConstraint" destination="zWy-ZG-FgF" id="8c8-YO-gZZ"/>
-                                            <outlet property="sleepWidthConstraint" destination="5MN-8W-Til" id="1PV-Qc-ei9"/>
+                                            <outlet property="sleepCenterConstraint" destination="kfj-7F-i5I" id="RbC-XJ-dSe"/>
+                                            <outlet property="sleepHeightConstraint" destination="Pcy-KG-x4P" id="Kps-uv-DU2"/>
+                                            <outlet property="sleepWidthConstraint" destination="I9r-96-g2h" id="g6X-qn-3VT"/>
                                             <outlet property="weekdayLabel" destination="LGo-k4-PqH" id="Zsg-7x-h4K"/>
                                         </connections>
                                     </collectionViewCell>

@@ -19,10 +19,12 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *painWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *painHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *painTopGapConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *painCenterConstraint;
 
 @property (weak, nonatomic) IBOutlet UIView *sleepBubble;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sleepWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sleepHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sleepBottomGapConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sleepCenterConstraint;
 
 @end

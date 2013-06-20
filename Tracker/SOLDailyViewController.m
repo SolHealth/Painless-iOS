@@ -43,12 +43,12 @@
     NSString *dayText = [self.daysTracker descriptionTextForDayIndex:[self.daysTracker dayIndexForDay:self.dailyData.day]];
     [self.dayButton setTitle:dayText forState:UIControlStateNormal];
 
-    [self.muscleButton setTitle:[NSString stringWithFormat:@"%i", abs(self.dailyData.musclePainHundredths / 10)] forState:UIControlStateNormal];
-    [self.jointButton setTitle:[NSString stringWithFormat:@"%i", abs(self.dailyData.jointPainHundredths / 10)] forState:UIControlStateNormal];
-    [self.headButton setTitle:[NSString stringWithFormat:@"%i", abs(self.dailyData.headPainHundredths / 10)] forState:UIControlStateNormal];
-    [self.tactileButton setTitle:[NSString stringWithFormat:@"%i", abs(self.dailyData.tactilePainHundredths / 10)] forState:UIControlStateNormal];
-    [self.brainFogButton setTitle:[NSString stringWithFormat:@"%i", abs(self.dailyData.musclePainHundredths / 10)] forState:UIControlStateNormal];
-    [self.sleepButton setTitle:[NSString stringWithFormat:@"%i", abs(self.dailyData.sleepMinutes / 60)] forState:UIControlStateNormal];
+    [self.muscleButton setTitle:[NSString stringWithFormat:@"%i", self.dailyData.musclePainHundredths / 10] forState:UIControlStateNormal];
+    [self.jointButton setTitle:[NSString stringWithFormat:@"%i", self.dailyData.jointPainHundredths / 10] forState:UIControlStateNormal];
+    [self.headButton setTitle:[NSString stringWithFormat:@"%i", self.dailyData.headPainHundredths / 10] forState:UIControlStateNormal];
+    [self.tactileButton setTitle:[NSString stringWithFormat:@"%i", self.dailyData.tactilePainHundredths / 10] forState:UIControlStateNormal];
+    [self.brainFogButton setTitle:[NSString stringWithFormat:@"%i", self.dailyData.musclePainHundredths / 10] forState:UIControlStateNormal];
+    [self.sleepButton setTitle:[NSString stringWithFormat:@"%i", self.dailyData.sleepMinutes / 60] forState:UIControlStateNormal];
 
     for (UIButton *button in @[self.muscleButton, self.jointButton, self.headButton, self.tactileButton, self.brainFogButton]) {
         button.layer.cornerRadius = 39;
