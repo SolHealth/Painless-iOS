@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1D0716517712CF300E9FC45"
-               BuildableName = "Tracker.app"
+               BuildableName = "Painless.app"
                BlueprintName = "Painless"
                ReferencedContainer = "container:Painless.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1D0718617712CF300E9FC45"
-               BuildableName = "TrackerTests.xctest"
+               BuildableName = "PainlessTests.xctest"
                BlueprintName = "PainlessTests"
                ReferencedContainer = "container:Painless.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1D0716517712CF300E9FC45"
-            BuildableName = "Tracker.app"
+            BuildableName = "Painless.app"
             BlueprintName = "Painless"
             ReferencedContainer = "container:Painless.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1D0716517712CF300E9FC45"
-            BuildableName = "Tracker.app"
+            BuildableName = "Painless.app"
             BlueprintName = "Painless"
             ReferencedContainer = "container:Painless.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1D0716517712CF300E9FC45"
-            BuildableName = "Tracker.app"
+            BuildableName = "Painless.app"
             BlueprintName = "Painless"
             ReferencedContainer = "container:Painless.xcodeproj">
          </BuildableReference>

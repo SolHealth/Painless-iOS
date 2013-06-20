@@ -525,6 +525,7 @@
 				B1D0719A17712CF300E9FC45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1D0719B17712CF300E9FC45 /* Build configuration list for PBXNativeTarget "PainlessTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +534,7 @@
 				B1D0719D17712CF300E9FC45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -38,11 +38,11 @@
 
 #pragma mark - Instance-level data manipulation
 
-- (NSInteger)numberOfDaysSinceStartingDateInclusive
+- (NSInteger)todayIndex
 {
     NSInteger today = [self.class dayForDate:[NSDate date] inCalendar:self.calendar];
-    NSInteger numberOfDays = today - self.startingDay + 1;
-    return numberOfDays;
+    NSInteger todayIndex = today - self.startingDay;
+    return todayIndex;
 }
 
 - (NSString *)weekdayTextForDayIndex:(NSInteger)dayIndex

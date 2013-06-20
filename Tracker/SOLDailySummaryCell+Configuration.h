@@ -8,9 +8,13 @@
 
 #import "SOLDailySummaryCell.h"
 
+@class SOLDaysTracker;
+
 @interface SOLDailySummaryCell (Configuration)
 
-- (void)configureWithWeekdayText:(NSString *)weekdayText
-                         dayText:(NSString *)dayText;
+- (void)configureWithDayIndex:(NSInteger)dayIndex
+                  daysTracker:(SOLDaysTracker *)daysTracker
+                 sleepMinutes:(NSInteger)sleepMinutes
+          overallPainSeverity:(CGFloat)overallPainSeverity;
 
 @end

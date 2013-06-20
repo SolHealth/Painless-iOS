@@ -7,13 +7,91 @@
 //
 
 #import "SOLDailySummaryCell+Configuration.h"
+#import "SOLDaysTracker.h"
+
+#define SOL_BUBBLE_DISTANCE_FROM_CENTER_TO_VERTICAL_WALL (32.5f)
+#define SOL_BUBBLE_MAX_RADIUS (22.5f)
+
+#define BYPASS_CONSTRAINTS
 
 @implementation SOLDailySummaryCell (Configuration)
 
-- (void)configureWithWeekdayText:(NSString *)weekdayText dayText:(NSString *)dayText
+- (void)configureWithDayIndex:(NSInteger)dayIndex
+                  daysTracker:(SOLDaysTracker *)daysTracker
+                 sleepMinutes:(NSInteger)sleepMinutes
+          overallPainSeverity:(CGFloat)overallPainSeverity
 {
-    self.weekdayLabel.text = [weekdayText uppercaseString];
-    self.dayLabel.text = dayText;
+    self.weekdayLabel.text = [[daysTracker weekdayTextForDayIndex:dayIndex] uppercaseString];
+    self.dayLabel.text = [daysTracker dayTextForDayIndex:dayIndex];
+    self.painBubbleRadius = [self.class painBubbleRadiusForOverallPainSeverity:overallPainSeverity];
+    self.sleepBubbleRadius = [self.class sleepBubbleRadiusForSleepMinutes:sleepMinutes];
+
+    UIColor *dateColor;
+    // TODO: This todayIndex may have changed if we've crossed midnight - probably should let the view controller dictate its version of 'todayness'
+    if ([daysTracker todayIndex] == dayIndex) {
+        // 'Black color'
+        // TODO: put colors in a category
+        dateColor = [UIColor colorWithRed:36 / 255.f green:38 / 255.f blue:51 / 255.f alpha:1];
+    } else {
+        dateColor = [UIColor colorWithRed:136 / 255.f green:139 / 255.f blue:153 / 255.f alpha:1];
+    }
+
+    self.weekdayLabel.textColor = dateColor;
+    self.dayLabel.textColor = dateColor;
+}
+
+// Grey: dateColor = [UIColor colorWithRed:192 / 255.f green:194 / 255.f blue:204 / 255.f alpha:1];
+
++ (CGFloat)painBubbleRadiusForOverallPainSeverity:(CGFloat)overallPainSeverity
+{
+    return overallPainSeverity * SOL_BUBBLE_MAX_RADIUS;
+}
+
++ (CGFloat)sleepBubbleRadiusForSleepMinutes:(NSInteger)sleepMinutes
+{
+    // Scale our sleepMinutes linearly across our potential radii
+    CGFloat scale = MIN(1.f, MAX(0.f, sleepMinutes / (8.f * 60.f)));
+    return scale * SOL_BUBBLE_MAX_RADIUS;
+}
+
+- (void)setPainBubbleRadius:(CGFloat)painBubbleRadius
+{
+    self.painBubble.layer.cornerRadius = painBubbleRadius;
+
+#ifdef BYPASS_CONSTRAINTS
+    self.painBubble.translatesAutoresizingMaskIntoConstraints = YES;
+    [self removeConstraints:@[self.painWidthConstraint, self.painTopGapConstraint, self.painHeightConstraint]];
+    self.painBubble.bounds = (CGRect) {
+        .origin = CGPointZero,
+        .size.width = 2 * painBubbleRadius,
+        .size.height = 2 * painBubbleRadius,
+    };
+#else
+    self.painWidthConstraint.constant = 2 * painBubbleRadius;
+    self.painHeightConstraint.constant = 2 * painBubbleRadius;
+    self.painTopGapConstraint.constant = SOL_BUBBLE_DISTANCE_FROM_CENTER_TO_VERTICAL_WALL - painBubbleRadius;
+    [self setNeedsLayout];
+#endif
+}
+
+- (void)setSleepBubbleRadius:(CGFloat)sleepBubbleRadius
+{
+    self.sleepBubble.layer.cornerRadius = sleepBubbleRadius;
+
+#ifdef BYPASS_CONSTRAINTS
+    self.sleepBubble.translatesAutoresizingMaskIntoConstraints = YES;
+    [self removeConstraints:@[self.sleepWidthConstraint, self.sleepBottomGapConstraint, self.sleepHeightConstraint]];
+    self.sleepBubble.bounds = (CGRect) {
+        .origin = CGPointZero,
+        .size.width = 2 * sleepBubbleRadius,
+        .size.height = 2 * sleepBubbleRadius,
+    };
+#else
+    self.sleepWidthConstraint.constant = 2 * sleepBubbleRadius;
+    self.sleepHeightConstraint.constant = 2 * sleepBubbleRadius;
+    self.sleepBottomGapConstraint.constant = SOL_BUBBLE_DISTANCE_FROM_CENTER_TO_VERTICAL_WALL - sleepBubbleRadius;
+    [self setNeedsLayout];
+#endif
 }
 
 @end

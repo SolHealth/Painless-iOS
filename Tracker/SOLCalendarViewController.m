@@ -35,7 +35,7 @@
     if ((self = [super initWithCoder:aDecoder])) {
         _daysTracker = [[SOLDaysTracker alloc] initWithCalendar:[NSCalendar currentCalendar]
                                                    startingDate:[NSDate dateWithTimeIntervalSinceNow:-1251542]];
-        _numberOfDays = [_daysTracker numberOfDaysSinceStartingDateInclusive];
+        _numberOfDays = [_daysTracker todayIndex] + 1;
         _visibleReferenceIndexPath = nil;
         self.modalPresentationStyle = UIModalPresentationCustom;
         self.transitioningDelegate = [(SOLAppDelegate *)[UIApplication sharedApplication].delegate transitioningManager];
@@ -88,11 +88,10 @@
 
     NSInteger dayIndex = [self dayIndexForIndexPath:indexPath];
 
-    NSString *weekdayText = [self.daysTracker weekdayTextForDayIndex:dayIndex];
-    NSString *dayText     = [self.daysTracker dayTextForDayIndex:dayIndex];
-
-    [cell configureWithWeekdayText:weekdayText
-                           dayText:dayText];
+    [cell configureWithDayIndex:dayIndex
+                    daysTracker:self.daysTracker
+                   sleepMinutes:arc4random() % (8 * 60)
+            overallPainSeverity:arc4random() % 1000 / 1000.f];
 
     return cell;
 }
@@ -101,8 +100,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Set this for the transition animator to animate from
-    self.selectedView = (SOLDailySummaryCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    // Expose this to the transition animator so it can animate "into" the data container
+    SOLDailySummaryCell *selectedCell = (SOLDailySummaryCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    self.selectedView = selectedCell.dataContainerView;
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -25,22 +25,32 @@
 
     UIView *containerView = calendarViewController.view.superview;
     // TODO: Why does the commented out version not work?
-    //    containerView = transitionContext.containerView;
+    // containerView = transitionContext.containerView;
 
+    // Set up our math...
     UIView *selectedView = calendarViewController.selectedView;
     CGRect selectedRect = [containerView convertRect:selectedView.frame fromView:selectedView.superview];
     CGRect finalRect = containerView.bounds;
 
-    summaryViewController.view.transform = SOLCGAffineTransformFromRectToRect(finalRect, selectedRect);
 
+    // We're going to take a snapshot of the view we've selected, expand that as though we 'zoom into' it, and gradually fade the actual view controller into its place.
+#warning This will break in iOS 7 Seed 2: change the message to [selectedView snapshotView]
+    // 'Fade out' zoom view
+    UIView *selectedViewSnapshot = [selectedView snapshot];
+    [containerView addSubview:selectedViewSnapshot];
+    selectedViewSnapshot.frame = selectedRect;
+
+    // 'Fade in' zoom view - contort it to come out of the same point as the snapshot
+    summaryViewController.view.transform = SOLCGAffineTransformFromRectToRect(finalRect, selectedRect);
     [containerView addSubview:summaryViewController.view];
 
+    // Now, boom! Restore the new viewer to full, contort up the snapshot, and take it away.
     [UIView animateWithDuration:0.5f animations:^{
         summaryViewController.view.transform = CGAffineTransformIdentity;
-        selectedView.transform = SOLCGAffineTransformFromRectToRect(selectedRect, finalRect);
+        selectedViewSnapshot.transform = SOLCGAffineTransformFromRectToRect(selectedRect, finalRect);
         summaryViewController.view.alpha = 1;
-        calendarViewController.view.alpha = 0;
     } completion:^(BOOL finished) {
+        [selectedViewSnapshot removeFromSuperview];
         [transitionContext completeTransition:YES];
     }];
 }
