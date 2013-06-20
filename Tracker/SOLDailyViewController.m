@@ -10,8 +10,14 @@
 
 #import "SOLTransitioningManager.h"
 #import "SOLAppDelegate.h"
+#import "SOLDaysTracker.h"
+#import "SOLDailyData.h"
 
 @interface SOLDailyViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *prevButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *dayButton;
 
 @end
 
@@ -30,6 +36,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    self.prevButton.imageView.contentMode = UIViewContentModeCenter;
+    self.nextButton.imageView.contentMode = UIViewContentModeCenter;
+    NSString *dayText = [self.daysTracker descriptionTextForDayIndex:[self.daysTracker dayIndexForDay:self.dailyData.day]];
+    [self.dayButton setTitle:dayText forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning

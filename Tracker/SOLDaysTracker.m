@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSDateFormatter *weekdayFormatter;
 @property (nonatomic, strong) NSDateFormatter *dayFormatter;
 @property (nonatomic, strong) NSDateFormatter *monthYearFormatter;
+@property (nonatomic, strong) NSDateFormatter *monthDayFormatter;
 
 @end
 
@@ -32,8 +33,9 @@
         _closingDay = [self.class dayForDate:[NSDate date] inCalendar:_calendar];
 
         _weekdayFormatter   = [self.class dateFormatterWithFormatTemplate:@"EEE"    calendar:_calendar];
-        _dayFormatter       = [self.class dateFormatterWithFormatTemplate:@"dd"     calendar:_calendar];
+        _dayFormatter       = [self.class dateFormatterWithFormatTemplate:@"d"      calendar:_calendar];
         _monthYearFormatter = [self.class dateFormatterWithFormatTemplate:@"MMMM y" calendar:_calendar];
+        _monthDayFormatter  = [self.class dateFormatterWithFormatTemplate:@"MMMM d" calendar:_calendar];
     }
     return self;
 }
@@ -59,6 +61,27 @@
 {
     return [self textForDayIndex:dayIndex withFormatter:self.monthYearFormatter];
 }
+
+- (NSString *)descriptionTextForDayIndex:(NSInteger)dayIndex
+{
+    if (dayIndex == [self closingDayIndex]) {
+        return NSLocalizedString(@"Today", nil);
+    } else {
+        return [self textForDayIndex:dayIndex withFormatter:self.monthDayFormatter];
+    }
+}
+
+- (NSInteger)dayForDayIndex:(NSInteger)dayIndex
+{
+    return [self.class dayForDayIndex:dayIndex startingDay:self.startingDay];
+}
+
+- (NSInteger)dayIndexForDay:(NSInteger)day
+{
+    return [self.class dayIndexForDay:day startingDay:self.startingDay];
+}
+
+#pragma mark - Private internal helper functions
 
 - (NSDate *)dateForDayIndex:(NSInteger)dayIndex
 {
@@ -89,6 +112,11 @@
 + (NSInteger)dayForDayIndex:(NSInteger)dayIndex startingDay:(NSInteger)startingDay
 {
     return dayIndex + startingDay;
+}
+
++ (NSInteger)dayIndexForDay:(NSInteger)day startingDay:(NSInteger)startingDay
+{
+    return day - startingDay;
 }
 
 // Note here that all references to 'days' are ordinal within an era. We're going to assume nobody's jogging between eras.

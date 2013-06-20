@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13F106F17735C6000F00AE3 /* SOLDailyData.m in Sources */ = {isa = PBXBuildFile; fileRef = B13F106E17735C6000F00AE3 /* SOLDailyData.m */; };
 		B1D0716A17712CF300E9FC45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716917712CF300E9FC45 /* Foundation.framework */; };
 		B1D0716C17712CF300E9FC45 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716B17712CF300E9FC45 /* CoreGraphics.framework */; };
 		B1D0716E17712CF300E9FC45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716D17712CF300E9FC45 /* UIKit.framework */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B13F106D17735C6000F00AE3 /* SOLDailyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLDailyData.h; sourceTree = "<group>"; };
+		B13F106E17735C6000F00AE3 /* SOLDailyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLDailyData.m; sourceTree = "<group>"; };
 		B1D0716617712CF300E9FC45 /* Painless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Painless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D0716917712CF300E9FC45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1D0716B17712CF300E9FC45 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B13F107017735E6E00F00AE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B13F106D17735C6000F00AE3 /* SOLDailyData.h */,
+				B13F106E17735C6000F00AE3 /* SOLDailyData.m */,
+				B1D071A617723A0800E9FC45 /* SOLDaysTracker.h */,
+				B1D071A717723A0800E9FC45 /* SOLDaysTracker.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B1D0715D17712CF300E9FC45 = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +152,7 @@
 				B1D0717817712CF300E9FC45 /* SOLAppDelegate.h */,
 				B1D0717917712CF300E9FC45 /* SOLAppDelegate.m */,
 				B1D0717B17712CF300E9FC45 /* Main.storyboard */,
-				B1D071A617723A0800E9FC45 /* SOLDaysTracker.h */,
-				B1D071A717723A0800E9FC45 /* SOLDaysTracker.m */,
+				B13F107017735E6E00F00AE3 /* Model */,
 				B1D071A417722E4200E9FC45 /* Custom Views */,
 				B1D071A517722E4800E9FC45 /* View Controllers */,
 				B1D071B21772663000E9FC45 /* Transitioning */,
@@ -315,6 +328,7 @@
 			files = (
 				B1D071BB1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m in Sources */,
 				B1D071B81772670200E9FC45 /* SOLDailyToCalendarTransitionAnimator.m in Sources */,
+				B13F106F17735C6000F00AE3 /* SOLDailyData.m in Sources */,
 				B1D071A017722DDF00E9FC45 /* SOLCalendarViewController.m in Sources */,
 				B1D071A317722E3D00E9FC45 /* SOLDailySummaryCell.m in Sources */,
 				B1D071A817723A0800E9FC45 /* SOLDaysTracker.m in Sources */,

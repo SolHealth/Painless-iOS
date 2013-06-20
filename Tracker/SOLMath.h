@@ -21,4 +21,34 @@ CG_INLINE CGAffineTransform SOLCGAffineTransformFromRectToRect(CGRect fromRect, 
     return CGAffineTransformMake(scaleWidth, 0, 0, scaleHeight, offsetX, offsetY);
 }
 
+#define SOL_HIGH_ORDINALITY (1 << 16)
+
+// Returns a random number 0..ordinality-1
+CG_INLINE NSInteger SOLRand(NSInteger ordinality)
+{
+    return ((NSInteger)arc4random()) % ordinality;
+}
+
+CG_INLINE CGFloat SOLRandFloat(NSInteger ordinality)
+{
+    return SOLRand(ordinality) / (CGFloat)ordinality;
+}
+
+// trueFraction = 0 -> always false
+// trueFraction = 1 -> always true
+CG_INLINE BOOL SOLRandBool(CGFloat trueFraction)
+{
+    NSInteger threshold = SOL_HIGH_ORDINALITY * trueFraction;
+    return (SOLRandFloat(SOL_HIGH_ORDINALITY) < threshold);
+}
+
+CG_INLINE NSInteger SOLRandOrNotFound(NSInteger ordinality, CGFloat foundFraction)
+{
+    if(SOLRandBool(foundFraction)) {
+        return SOLRand(ordinality);
+    } else {
+        return NSNotFound;
+    }
+}
+
 #endif

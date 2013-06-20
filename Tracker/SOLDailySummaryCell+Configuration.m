@@ -37,6 +37,16 @@
 
     self.weekdayLabel.textColor = dateColor;
     self.dayLabel.textColor = dateColor;
+
+    // Configure the shadow, utilizing the current bounds for performance
+    self.dataContainerView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.dataContainerView.layer.shadowOpacity = 0.2f;
+    self.dataContainerView.layer.shadowRadius = 1.f;
+    self.dataContainerView.layer.shadowOffset = CGSizeZero;
+    self.dataContainerView.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.dataContainerView.bounds
+                                                                         cornerRadius:self.dataContainerView.layer.cornerRadius].CGPath;
+    // TODO: Expand the actual cell to encompass the container view's shadow
+    self.clipsToBounds = NO;
 }
 
 // Grey: dateColor = [UIColor colorWithRed:192 / 255.f green:194 / 255.f blue:204 / 255.f alpha:1];
