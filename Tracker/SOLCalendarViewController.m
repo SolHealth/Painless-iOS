@@ -21,9 +21,6 @@
 
 @property (nonatomic, strong) NSIndexPath *visibleReferenceIndexPath;
 
-// Note that this may desynch from the actual number of days if midnight is crossed - but our data should stay internally consistent.
-@property (nonatomic, readonly) NSInteger numberOfDays;
-
 @property (nonatomic, weak, readwrite) UIView *selectedView;
 
 @end
@@ -35,7 +32,6 @@
     if ((self = [super initWithCoder:aDecoder])) {
         _daysTracker = [[SOLDaysTracker alloc] initWithCalendar:[NSCalendar currentCalendar]
                                                    startingDate:[NSDate dateWithTimeIntervalSinceNow:-1251542]];
-        _numberOfDays = [_daysTracker todayIndex] + 1;
         _visibleReferenceIndexPath = nil;
         self.modalPresentationStyle = UIModalPresentationCustom;
         self.transitioningDelegate = [(SOLAppDelegate *)[UIApplication sharedApplication].delegate transitioningManager];
@@ -54,12 +50,12 @@
     [super viewWillAppear:animated];
 
     // Let's show 'today'.
-    NSIndexPath *todayIndexPath = [NSIndexPath indexPathForItem:self.numberOfDays - 1 inSection:0];
-    [self.collectionView scrollToItemAtIndexPath:todayIndexPath
+    NSIndexPath *closingDayIndexPath = [NSIndexPath indexPathForItem:self.daysTracker.closingDayIndex inSection:0];
+    [self.collectionView scrollToItemAtIndexPath:closingDayIndexPath
                                 atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
                                         animated:NO];
     // And make sure we update with the correct reference path; the above line triggers scrollViewDidScroll with no visible cells yet.
-    [self updateWithNewReferenceIndexPath:todayIndexPath];
+    [self updateWithNewReferenceIndexPath:closingDayIndexPath];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,7 +73,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.numberOfDays;
+    return self.daysTracker.closingDayIndex + 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

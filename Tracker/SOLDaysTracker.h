@@ -13,7 +13,8 @@
 - (instancetype)initWithCalendar:(NSCalendar *)calendar
                     startingDate:(NSDate *)startingDate;
 
-- (NSInteger)todayIndex;
+// This is today at the time the object is instantiated
+- (NSInteger)closingDayIndex;
 
 // Note: A 'day index' is an integer in [0..numberOfDays-1], corresponding to [startingDate..today]
 

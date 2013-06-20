@@ -27,8 +27,7 @@
     self.sleepBubbleRadius = [self.class sleepBubbleRadiusForSleepMinutes:sleepMinutes];
 
     UIColor *dateColor;
-    // TODO: This todayIndex may have changed if we've crossed midnight - probably should let the view controller dictate its version of 'todayness'
-    if ([daysTracker todayIndex] == dayIndex) {
+    if (daysTracker.closingDayIndex == dayIndex) {
         // 'Black color'
         // TODO: put colors in a category
         dateColor = [UIColor colorWithRed:36 / 255.f green:38 / 255.f blue:51 / 255.f alpha:1];

@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy, readonly) NSCalendar *calendar;
 @property (nonatomic, readonly) NSInteger startingDay;
+@property (nonatomic, readonly) NSInteger closingDay;
 
 @property (nonatomic, strong) NSDateFormatter *weekdayFormatter;
 @property (nonatomic, strong) NSDateFormatter *dayFormatter;
@@ -28,6 +29,7 @@
         _calendar = [calendar copy];
         _startingDay = [self.class dayForDate:startingDate
                                    inCalendar:_calendar];
+        _closingDay = [self.class dayForDate:[NSDate date] inCalendar:_calendar];
 
         _weekdayFormatter   = [self.class dateFormatterWithFormatTemplate:@"EEE"    calendar:_calendar];
         _dayFormatter       = [self.class dateFormatterWithFormatTemplate:@"dd"     calendar:_calendar];
@@ -38,11 +40,9 @@
 
 #pragma mark - Instance-level data manipulation
 
-- (NSInteger)todayIndex
+- (NSInteger)closingDayIndex
 {
-    NSInteger today = [self.class dayForDate:[NSDate date] inCalendar:self.calendar];
-    NSInteger todayIndex = today - self.startingDay;
-    return todayIndex;
+    return self.closingDay - self.startingDay;
 }
 
 - (NSString *)weekdayTextForDayIndex:(NSInteger)dayIndex
