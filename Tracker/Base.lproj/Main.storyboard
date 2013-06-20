@@ -10,7 +10,7 @@
             <objects>
                 <viewController storyboardIdentifier="DailyViewController" id="vXZ-lx-hvc" customClass="SOLDailyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF5-rM-XU4">
@@ -89,9 +89,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="78" id="8HW-Hn-oTT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
                                         <state key="normal">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.10537774115800858" green="0.11120637506246567" blue="0.15044116973876953" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
@@ -128,9 +128,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="78" id="c99-PC-o9e"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
                                         <state key="normal">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.10537774115800858" green="0.11120637506246567" blue="0.15044116973876953" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
@@ -167,9 +167,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="78" id="8oz-IT-pT4"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
                                         <state key="normal">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.10537774115800858" green="0.11120637506246567" blue="0.15044116973876953" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
@@ -206,9 +206,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="78" id="hHH-7v-VPf"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
                                         <state key="normal">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.10537774115800858" green="0.11120637506246567" blue="0.15044116973876953" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
@@ -245,9 +245,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="78" id="bpZ-Qt-o6d"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
                                         <state key="normal">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.10537774115800858" green="0.11120637506246567" blue="0.15044116973876953" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
@@ -283,6 +283,22 @@
                                     <constraint firstAttribute="width" constant="65" id="ca2-f7-LPA"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fx4-bG-8Ac">
+                                <rect key="frame" x="124" y="385" width="73" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43008220195770264" green="0.57925105094909668" blue="0.99873048067092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1053777412" green="0.1112063751" blue="0.15044116969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sleepButtonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UgI-1n-yLo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -325,9 +341,15 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="brainFogButton" destination="JYw-WL-C55" id="XAl-3Q-xah"/>
                         <outlet property="dayButton" destination="sF5-rM-XU4" id="gvF-UF-pGk"/>
+                        <outlet property="headButton" destination="4QG-OK-g59" id="NN0-dT-MDA"/>
+                        <outlet property="jointButton" destination="KKT-Sg-P9V" id="9Bz-7m-j9L"/>
+                        <outlet property="muscleButton" destination="FAX-CF-YUd" id="0yt-wk-vG2"/>
                         <outlet property="nextButton" destination="5Qp-aL-g9o" id="JBZ-rf-VNL"/>
                         <outlet property="prevButton" destination="afh-jE-pfl" id="QKt-ds-LyR"/>
+                        <outlet property="sleepButton" destination="Fx4-bG-8Ac" id="Ks6-73-2Pr"/>
+                        <outlet property="tactileButton" destination="Lxv-Ha-jmI" id="5wj-AN-ilc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -335,16 +357,173 @@
             </objects>
             <point key="canvasLocation" x="976" y="408"/>
         </scene>
+        <!--Sleep Entry View Controller-->
+        <scene sceneID="SF3-up-Bhj">
+            <objects>
+                <viewController storyboardIdentifier="SleepEntryViewController" id="Kcu-s0-w98" customClass="SOLSleepEntryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uzg-M1-m5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kb-4C-4oO">
+                                <rect key="frame" x="0.0" y="311" width="320" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yka-VO-a87">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="131"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mRe-FI-Nev">
+                                            <size key="itemSize" width="89" height="93"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SleepHoursCell" reuseIdentifier="SleepHoursCell" id="0bG-V5-9WZ" customClass="SOLSleepHoursCell">
+                                                <rect key="frame" x="0.0" y="19" width="89" height="93"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="93"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycx-of-uoX">
+                                                            <rect key="frame" x="0.0" y="25" width="89" height="44"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
+                                                            <color key="textColor" red="0.1053777412" green="0.1112063751" blue="0.15044116969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="HRS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLB-Au-Z82">
+                                                            <rect key="frame" x="0.0" y="62" width="89" height="18"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="13"/>
+                                                            <color key="textColor" red="0.1053777412" green="0.1112063751" blue="0.15044116969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="centerY" secondItem="ycx-of-uoX" secondAttribute="centerY" id="4Cq-Lx-puU"/>
+                                                    <constraint firstItem="VLB-Au-Z82" firstAttribute="leading" secondItem="0bG-V5-9WZ" secondAttribute="leading" id="6Uz-nf-uv2"/>
+                                                    <constraint firstItem="ycx-of-uoX" firstAttribute="leading" secondItem="0bG-V5-9WZ" secondAttribute="leading" id="7OI-Ix-Niz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VLB-Au-Z82" secondAttribute="trailing" id="Ieb-Vr-t1f"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ycx-of-uoX" secondAttribute="trailing" id="cT3-Pb-Afx"/>
+                                                    <constraint firstItem="VLB-Au-Z82" firstAttribute="top" secondItem="ycx-of-uoX" secondAttribute="bottom" constant="-7" id="v5L-mj-plt"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="hourLabel" destination="ycx-of-uoX" id="5C4-j4-2jZ"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Kcu-s0-w98" id="ljR-et-qbq"/>
+                                            <outlet property="delegate" destination="Kcu-s0-w98" id="cTJ-hq-dhq"/>
+                                        </connections>
+                                    </collectionView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last night I slept" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8e-m6-QkG">
+                                        <rect key="frame" x="0.0" y="10" width="320" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="0.45990914109999997" green="0.47082912919999997" blue="0.52944421770000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZK-U2-0jZ">
+                                        <rect key="frame" x="20" y="194" width="135" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.69969791169999995" green="0.70734947920000002" blue="0.75541847939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="4Rg-3H-lxj"/>
+                                            <constraint firstAttribute="width" constant="135" id="wI1-gn-j61"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <inset key="contentEdgeInsets" minX="57" minY="12" maxX="57" maxY="12"/>
+                                        <state key="normal" image="cancel">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed" destination="Kcu-s0-w98" eventType="touchUpInside" id="wEK-im-RRu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzX-ua-9gi">
+                                        <rect key="frame" x="165" y="194" width="135" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.1366019547" green="0.81064611669999997" blue="0.15593141320000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="Vkv-B3-3uk"/>
+                                            <constraint firstAttribute="width" constant="135" id="eYr-qS-qxD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <inset key="contentEdgeInsets" minX="55" minY="12" maxX="55" maxY="12"/>
+                                        <state key="normal" image="confirm">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirmButtonPressed" destination="Kcu-s0-w98" eventType="touchUpInside" id="Vsu-1E-Eqk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Q8e-m6-QkG" firstAttribute="leading" secondItem="7kb-4C-4oO" secondAttribute="leading" id="36s-35-2Or"/>
+                                    <constraint firstItem="Yka-VO-a87" firstAttribute="trailing" secondItem="7kb-4C-4oO" secondAttribute="trailing" id="4CX-oY-AoT"/>
+                                    <constraint firstAttribute="bottom" secondItem="DzX-ua-9gi" secondAttribute="bottom" constant="20" id="7nu-Z2-98T"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q8e-m6-QkG" secondAttribute="trailing" id="BBU-mB-1O3"/>
+                                    <constraint firstAttribute="height" constant="257" id="Be8-fk-4Uv"/>
+                                    <constraint firstAttribute="trailing" secondItem="DzX-ua-9gi" secondAttribute="trailing" constant="20" id="Ixr-BH-MTS"/>
+                                    <constraint firstItem="oZK-U2-0jZ" firstAttribute="leading" secondItem="7kb-4C-4oO" secondAttribute="leading" constant="20" id="K1D-vA-Ek8"/>
+                                    <constraint firstItem="Q8e-m6-QkG" firstAttribute="top" secondItem="7kb-4C-4oO" secondAttribute="top" constant="10" id="WqP-ZG-D23"/>
+                                    <constraint firstItem="oZK-U2-0jZ" firstAttribute="top" secondItem="Yka-VO-a87" secondAttribute="bottom" constant="8" id="diU-xl-DXy"/>
+                                    <constraint firstItem="Yka-VO-a87" firstAttribute="top" secondItem="Q8e-m6-QkG" secondAttribute="bottom" constant="20" id="hmD-4c-Luj"/>
+                                    <constraint firstAttribute="bottom" secondItem="oZK-U2-0jZ" secondAttribute="bottom" constant="20" id="jge-f7-xcU"/>
+                                    <constraint firstItem="Yka-VO-a87" firstAttribute="leading" secondItem="7kb-4C-4oO" secondAttribute="leading" id="yrO-p8-tNT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.95000000000000007" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7kb-4C-4oO" firstAttribute="trailing" secondItem="uzg-M1-m5Y" secondAttribute="trailing" id="15J-qg-dCW"/>
+                            <constraint firstAttribute="bottom" secondItem="7kb-4C-4oO" secondAttribute="bottom" id="ZRy-BU-05L"/>
+                            <constraint firstItem="7kb-4C-4oO" firstAttribute="leading" secondItem="uzg-M1-m5Y" secondAttribute="leading" id="iC0-z7-eG6"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="oZK-U2-0jZ" id="Gk4-kB-DIX"/>
+                        <outlet property="collectionView" destination="Yka-VO-a87" id="xrL-k9-p9u"/>
+                        <outlet property="confirmButton" destination="DzX-ua-9gi" id="1jn-Q4-NIX"/>
+                        <outlet property="modalView" destination="7kb-4C-4oO" id="9XO-TV-yNE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztz-Nd-GNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="1122"/>
+        </scene>
         <!--Calendar View Controller-->
         <scene sceneID="9UK-v6-Ip4">
             <objects>
                 <viewController storyboardIdentifier="CalendarViewController" id="rWu-b7-JlF" customClass="SOLCalendarViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCN-aG-gcB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YTD-uF-7cJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.93333333333333335" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CMO-kZ-gCr">
@@ -355,7 +534,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DailySummaryCell" id="rW5-km-C1e" customClass="SOLDailySummaryCell">
-                                        <rect key="frame" x="50" y="184" width="60" height="175"/>
+                                        <rect key="frame" x="50" y="140" width="60" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="175"/>
@@ -483,60 +662,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cancel" width="40" height="40"/>
+        <image name="confirm" width="50" height="40"/>
         <image name="next" width="28" height="40"/>
         <image name="prev" width="28" height="40"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SOLCalendarViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SOLCalendarViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="monthLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SOLDailySummaryCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SOLDailySummaryCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataContainerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="dayLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="painBubble" candidateClass="UIView"/>
-                <relationship kind="outlet" name="painHeightConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="painTopGapConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="painWidthConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="sleepBottomGapConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="sleepBubble" candidateClass="UIView"/>
-                <relationship kind="outlet" name="sleepHeightConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="sleepWidthConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="weekdayLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SOLDailyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SOLDailyViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dayButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="prevButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

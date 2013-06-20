@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B13F106F17735C6000F00AE3 /* SOLDailyData.m in Sources */ = {isa = PBXBuildFile; fileRef = B13F106E17735C6000F00AE3 /* SOLDailyData.m */; };
+		B13F107317737C4000F00AE3 /* SOLSleepEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13F107217737C4000F00AE3 /* SOLSleepEntryViewController.m */; };
+		B13F107617737EB500F00AE3 /* SOLPartialModalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B13F107517737EB500F00AE3 /* SOLPartialModalTransitionAnimator.m */; };
+		B13F107A1773804800F00AE3 /* SOLPartialModalDismissalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B13F10791773804800F00AE3 /* SOLPartialModalDismissalAnimator.m */; };
+		B13F107D177383E400F00AE3 /* SOLSleepHoursCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B13F107C177383E400F00AE3 /* SOLSleepHoursCell.m */; };
 		B1D0716A17712CF300E9FC45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716917712CF300E9FC45 /* Foundation.framework */; };
 		B1D0716C17712CF300E9FC45 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716B17712CF300E9FC45 /* CoreGraphics.framework */; };
 		B1D0716E17712CF300E9FC45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0716D17712CF300E9FC45 /* UIKit.framework */; };
@@ -44,6 +48,15 @@
 /* Begin PBXFileReference section */
 		B13F106D17735C6000F00AE3 /* SOLDailyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLDailyData.h; sourceTree = "<group>"; };
 		B13F106E17735C6000F00AE3 /* SOLDailyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLDailyData.m; sourceTree = "<group>"; };
+		B13F107117737C4000F00AE3 /* SOLSleepEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLSleepEntryViewController.h; sourceTree = "<group>"; };
+		B13F107217737C4000F00AE3 /* SOLSleepEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLSleepEntryViewController.m; sourceTree = "<group>"; };
+		B13F107417737EB500F00AE3 /* SOLPartialModalTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLPartialModalTransitionAnimator.h; sourceTree = "<group>"; };
+		B13F107517737EB500F00AE3 /* SOLPartialModalTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLPartialModalTransitionAnimator.m; sourceTree = "<group>"; };
+		B13F107717737F1100F00AE3 /* SOLPartialModalPresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLPartialModalPresentation.h; sourceTree = "<group>"; };
+		B13F10781773804800F00AE3 /* SOLPartialModalDismissalAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLPartialModalDismissalAnimator.h; sourceTree = "<group>"; };
+		B13F10791773804800F00AE3 /* SOLPartialModalDismissalAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLPartialModalDismissalAnimator.m; sourceTree = "<group>"; };
+		B13F107B177383E400F00AE3 /* SOLSleepHoursCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLSleepHoursCell.h; sourceTree = "<group>"; };
+		B13F107C177383E400F00AE3 /* SOLSleepHoursCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLSleepHoursCell.m; sourceTree = "<group>"; };
 		B1D0716617712CF300E9FC45 /* Painless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Painless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D0716917712CF300E9FC45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1D0716B17712CF300E9FC45 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -200,6 +213,8 @@
 				B1D071A217722E3D00E9FC45 /* SOLDailySummaryCell.m */,
 				B1D071AF177247EF00E9FC45 /* SOLDailySummaryCell+Configuration.h */,
 				B1D071B0177247EF00E9FC45 /* SOLDailySummaryCell+Configuration.m */,
+				B13F107B177383E400F00AE3 /* SOLSleepHoursCell.h */,
+				B13F107C177383E400F00AE3 /* SOLSleepHoursCell.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -211,6 +226,8 @@
 				B1D0719F17722DDF00E9FC45 /* SOLCalendarViewController.m */,
 				B1D0717E17712CF300E9FC45 /* SOLDailyViewController.h */,
 				B1D0717F17712CF300E9FC45 /* SOLDailyViewController.m */,
+				B13F107117737C4000F00AE3 /* SOLSleepEntryViewController.h */,
+				B13F107217737C4000F00AE3 /* SOLSleepEntryViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -224,6 +241,11 @@
 				B1D071B7177266F400E9FC45 /* SOLDailyToCalendarTransitionAnimator.m */,
 				B1D071B91772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.h */,
 				B1D071BA1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m */,
+				B13F107717737F1100F00AE3 /* SOLPartialModalPresentation.h */,
+				B13F107417737EB500F00AE3 /* SOLPartialModalTransitionAnimator.h */,
+				B13F107517737EB500F00AE3 /* SOLPartialModalTransitionAnimator.m */,
+				B13F10781773804800F00AE3 /* SOLPartialModalDismissalAnimator.h */,
+				B13F10791773804800F00AE3 /* SOLPartialModalDismissalAnimator.m */,
 			);
 			name = Transitioning;
 			sourceTree = "<group>";
@@ -326,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13F107317737C4000F00AE3 /* SOLSleepEntryViewController.m in Sources */,
 				B1D071BB1772671800E9FC45 /* SOLCalendarToDailyTransitionAnimator.m in Sources */,
 				B1D071B81772670200E9FC45 /* SOLDailyToCalendarTransitionAnimator.m in Sources */,
 				B13F106F17735C6000F00AE3 /* SOLDailyData.m in Sources */,
@@ -333,8 +356,11 @@
 				B1D071A317722E3D00E9FC45 /* SOLDailySummaryCell.m in Sources */,
 				B1D071A817723A0800E9FC45 /* SOLDaysTracker.m in Sources */,
 				B1D0718017712CF300E9FC45 /* SOLDailyViewController.m in Sources */,
+				B13F107617737EB500F00AE3 /* SOLPartialModalTransitionAnimator.m in Sources */,
 				B1D0717617712CF300E9FC45 /* main.m in Sources */,
 				B1D071B1177247EF00E9FC45 /* SOLDailySummaryCell+Configuration.m in Sources */,
+				B13F107D177383E400F00AE3 /* SOLSleepHoursCell.m in Sources */,
+				B13F107A1773804800F00AE3 /* SOLPartialModalDismissalAnimator.m in Sources */,
 				B1D071B51772666400E9FC45 /* SOLTransitioningManager.m in Sources */,
 				B1D0717A17712CF300E9FC45 /* SOLAppDelegate.m in Sources */,
 			);

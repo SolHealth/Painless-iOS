@@ -21,8 +21,11 @@
                  sleepMinutes:(NSInteger)sleepMinutes
           overallPainSeverity:(CGFloat)overallPainSeverity
 {
+    sleepMinutes = abs(sleepMinutes);
+    
     self.weekdayLabel.text = [[daysTracker weekdayTextForDayIndex:dayIndex] uppercaseString];
     self.dayLabel.text = [daysTracker dayTextForDayIndex:dayIndex];
+
     self.painBubbleRadius = [self.class painBubbleRadiusForOverallPainSeverity:overallPainSeverity];
     self.sleepBubbleRadius = [self.class sleepBubbleRadiusForSleepMinutes:sleepMinutes];
 

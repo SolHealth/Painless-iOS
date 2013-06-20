@@ -15,4 +15,11 @@
 @property (nonatomic, strong) SOLDaysTracker *daysTracker;
 @property (nonatomic, strong) SOLDailyData *dailyData;
 
+@property (weak, nonatomic) IBOutlet UIButton *muscleButton;
+@property (weak, nonatomic) IBOutlet UIButton *jointButton;
+@property (weak, nonatomic) IBOutlet UIButton *headButton;
+@property (weak, nonatomic) IBOutlet UIButton *tactileButton;
+@property (weak, nonatomic) IBOutlet UIButton *brainFogButton;
+@property (weak, nonatomic) IBOutlet UIButton *sleepButton;
+
 @end
