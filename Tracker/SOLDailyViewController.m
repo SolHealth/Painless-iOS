@@ -17,13 +17,19 @@
 
 @implementation SOLDailyViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder])) {
+        self.transitioningDelegate = [(SOLAppDelegate *)[UIApplication sharedApplication].delegate transitioningManager];
+        self.modalPresentationStyle = UIModalPresentationCustom;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
-    self.transitioningDelegate = [(SOLAppDelegate *)[UIApplication sharedApplication].delegate transitioningManager];
-    self.modalPresentationStyle = UIModalPresentationCustom;
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,8 +40,7 @@
 
 - (IBAction)zoomOut
 {
-    id nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CalendarViewController"];
-    [self presentViewController:nextViewController animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

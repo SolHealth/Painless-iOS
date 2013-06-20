@@ -29,14 +29,16 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    NSAssert([presenting isKindOfClass:[SOLDailyViewController class]] && [presented isKindOfClass:[SOLCalendarViewController class]], @"Unrecognized view controllers.");
-    return [self dailyToCalendarTransitionAnimator];
+    NSAssert([presenting isKindOfClass:[SOLCalendarViewController class]] &&
+             [presented  isKindOfClass:[SOLDailyViewController class]],
+             @"Unrecognized view controller.");
+    return [self calendarToDailyTransitionAnimator];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    NSAssert([dismissed isKindOfClass:[SOLCalendarViewController class]], @"Unrecognized view controller.");
-    return [self calendarToDailyTransitionAnimator];
+    NSAssert([dismissed isKindOfClass:[SOLDailyViewController class]], @"Unrecognized view controllers.");
+    return [self dailyToCalendarTransitionAnimator];
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator

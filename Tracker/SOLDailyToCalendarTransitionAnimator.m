@@ -22,8 +22,9 @@
     SOLDailyViewController *summaryViewController = (SOLDailyViewController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     SOLCalendarViewController *calendarViewController = (SOLCalendarViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
 
-    [transitionContext.containerView addSubview:calendarViewController.view];
-    [transitionContext.containerView sendSubviewToBack:calendarViewController.view];
+    UIView *containerView = summaryViewController.view.superview;
+    [containerView addSubview:calendarViewController.view];
+    [containerView sendSubviewToBack:calendarViewController.view];
 
     [UIView animateWithDuration:0.5f animations:^{
         summaryViewController.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.2, 0.2);

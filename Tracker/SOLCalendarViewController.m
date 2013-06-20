@@ -103,8 +103,10 @@
     // Expose this to the transition animator so it can animate "into" the data container
     SOLDailySummaryCell *selectedCell = (SOLDailySummaryCell *)[collectionView cellForItemAtIndexPath:indexPath];
     self.selectedView = selectedCell.dataContainerView;
+    
+    id detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DailyViewController"];
+    [self presentViewController:detailViewController animated:YES completion:nil];
 
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Data Management
