@@ -22,7 +22,7 @@
     UIViewController <SOLPartialModalPresentation> *toViewController = (UIViewController <SOLPartialModalPresentation> *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
 
     UIView *containerView = transitionContext.containerView;
-    UIView *backdropView = [fromViewController.view snapshot];
+    UIView *backdropView = [fromViewController.view snapshotView];
     UIView *tintView = [[UIView alloc] init];
     tintView.alpha = 0;
     tintView.backgroundColor = [UIColor blackColor];
